@@ -13,8 +13,8 @@ OptiRead is a next-generation OCR (Optical Character Recognition) tool designed 
 - **Mobile-friendly**: Mobile app version to be developed for on-the-go scanning.
 
 ## Tech Stack
-- **Backend**: Python with Tesseract OCR for text extraction.
-- **Frontend**: Angular (in development).
+- **Backend**: Python with Tesseract OCR for text extraction(working on this).
+- **Frontend**: Angular.
 - **Mobile App Framework**: [To be decided - considering React Native, Flutter, etc.].
 - **Deployment**: Planned deployment via cloud services like AWS or Azure.
 

@@ -36,9 +36,11 @@ OptiRead is a next-generation OCR (Optical Character Recognition) tool designed 
 - [ ] Cloud storage integration.
 
 
-Contributing
+## Contributing
+
 OptiRead is an open-source project in its early stages. We welcome any contributions or suggestions! Fork the repo, make your changes, and submit a pull request.
 
-License
+## License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 

@@ -26,12 +26,12 @@ OptiRead is a next-generation OCR (Optical Character Recognition) tool designed 
    git clone https://github.com/yourusername/OptiRead.git
    cd OptiRead
 Roadmap
- Set up project structure.
- Basic image-to-text conversion.
- PDF-to-text conversion.
- Mobile app integration.
- Multi-language support.
- Cloud storage integration.
+ [x] Set up project structure.
+ [ ] Basic image-to-text conversion.
+ [ ] PDF-to-text conversion.
+ [ ] Mobile app integration.
+ [ ] Multi-language support.
+ [ ] Cloud storage integration.
 Contributing
 OptiRead is an open-source project in its early stages. We welcome any contributions or suggestions! Fork the repo, make your changes, and submit a pull request.
 

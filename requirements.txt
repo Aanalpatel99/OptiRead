@@ -1,0 +1,7 @@
+opencv-python==4.5.3
+pillow==8.2.0
+pytesseract==0.3.8
+numpy==1.21.2
+flask==2.0.1
+requests==2.26.0
+google-cloud-storage==1.42.3

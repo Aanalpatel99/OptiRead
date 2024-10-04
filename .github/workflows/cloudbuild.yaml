@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/optiread/ocr-app', '.']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'ocr-app', '--image', 'gcr.io/optiread/ocr-app', '--region', 'northamerica-northeast2']
+images:
+  - 'gcr.io/optiread/ocr-app'

@@ -16,7 +16,7 @@ jobs:
           devBranch=$(echo "${{ github.event.pull_request.base.ref }}")
           requestedBranch=$(echo "${{ github.event.pull_request.head.ref }}")
           if [ "$devBranch" != "$requestedBranch" ]; then
-            echo "Requested branch is not up-to-date"
+            echo "Requested branch is not up-to-date" + $devBranch + $requestedBranch
             exit 1
           fi
   
@@ -27,7 +27,7 @@ jobs:
     - uses: actions/github-script@v6
       with:
         script: |
-          const REGEX = RegExp("^[A-Z]{2,3}_[a-z]{4,5}");
+          const REGEX = RegExp("^[A-Z]{2,3}_\w+");
  
           const { title } = context.payload.pull_request;
           

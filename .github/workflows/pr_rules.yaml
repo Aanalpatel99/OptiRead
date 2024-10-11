@@ -12,10 +12,7 @@ jobs:
 
       - name: Branch up-to-date rule
         run: |
-          git fetch origin
-          devBranch=${{ github.event.pull_request.base.ref }}
-          requestedBranch=${{ github.event.pull_request.head.ref }}
-          git fetch origin devBranch:requestedBranch
+          git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.head.ref }}
           if git merge-base --is-ancestor origin/${{ github.event.pull_request.base.ref }} HEAD; then
             echo "Pull request branch is up to date with target branch."
           else

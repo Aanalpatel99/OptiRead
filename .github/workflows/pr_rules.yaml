@@ -13,7 +13,6 @@ jobs:
       - name: Branch up-to-date rule
         run: |
           git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.head.ref }}
-          echo ("git merge-base --is-ancestor origin/main HEAD")
           if git merge-base --is-ancestor origin/main HEAD; then
             echo "Pull request branch is up to date with target branch."
           else
@@ -28,7 +27,7 @@ jobs:
     - uses: actions/github-script@v6
       with:
         script: |
-          const REGEX = RegExp("^[A-Z]{2,3}_\w+");
+          const REGEX = RegExp("([A-Z]{2,3}-\\d{1,5})\\s?(.+)");
  
           const { title } = context.payload.pull_request;
           

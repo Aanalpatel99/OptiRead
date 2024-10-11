@@ -13,8 +13,8 @@ jobs:
       - name: Branch up-to-date rule
         run: |
           git fetch origin
-          devBranch= 'refs/head/main'
-          requestedBranch= ${{github.ref}}
+          devBranch=${{ github.event.pull_request.base.ref }}
+          requestedBranch=${{ github.event.pull_request.head.ref }}
           if [ "$devBranch" != "$requestedBranch" ]; then
             echo "Requested branch is not up-to-date"
             exit 1

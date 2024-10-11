@@ -15,8 +15,11 @@ jobs:
           git fetch origin
           devBranch=${{ github.event.pull_request.base.ref }}
           requestedBranch=${{ github.event.pull_request.head.ref }}
-          if [ "$devBranch" != "$requestedBranch" ]; then
-            echo "Requested branch is not up-to-date"
+          git fetch origin devBranch:requestedBranch
+          if git merge-base --is-ancestor origin/${{ github.event.pull_request.base.ref }} HEAD; then
+            echo "Pull request branch is up to date with target branch."
+          else
+            echo "Pull request branch is behind the target branch. Please update your branch."
             exit 1
           fi
   

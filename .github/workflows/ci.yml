@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: '3.12'
       
+      - name: Add project directory to PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: 
           pip install -r requirements.txt
@@ -29,4 +32,4 @@ jobs:
         run: docker build -t optiread-app .
 
       - name: Run tests
-        run: docker run optiread-app pytest
+        run: docker run optiread-app pytest test/tes_optiread.py

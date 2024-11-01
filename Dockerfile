@@ -10,9 +10,14 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
 COPY . .
+COPY entrypoint.sh /entrypoint.sh
 
 # Expose the port (e.g., 5000) for the app to listen on
 EXPOSE 8080
 
-# Command to start the application (replace 'app.py' with your main file)
-CMD ["python", "app.py"]
+# Make the entrypoint script executable
+RUN chmod +x /entrypoint.sh
+
+# Set the entrypoint script as ENTRYPOINT
+ENTRYPOINT ["/entrypoint.sh"]
+

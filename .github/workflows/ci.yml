@@ -33,4 +33,4 @@ jobs:
         run: docker build -t optiread-app .
 
       - name: Run tests
-        run: docker run optiread-app pytest test/tes_optiread.py
+        run: docker run optiread-app pytest

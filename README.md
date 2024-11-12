@@ -111,7 +111,13 @@ To deploy the application to Google Cloud:
     ```
 
 ---
+## Dataset
+Yet to finalize.
+```
+from datasets import load_dataset
 
+ds = load_dataset("mychen76/invoices-and-receipts_ocr_v1")
+```
 ## Roadmap
 
 - [x] Set up project structure.

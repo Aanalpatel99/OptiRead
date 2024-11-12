@@ -118,6 +118,16 @@ from datasets import load_dataset
 
 ds = load_dataset("mychen76/invoices-and-receipts_ocr_v1")
 ```
+```
+from datasets import load_dataset
+
+ds = load_dataset("echo840/OCRBench")
+```
+```
+from datasets import load_dataset
+
+ds = load_dataset("e-val/short_ocr_sentences")
+```
 ## Roadmap
 
 - [x] Set up project structure.
